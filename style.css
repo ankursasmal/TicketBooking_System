@@ -1,0 +1,19 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+ }
+ nav{
+    background-color: rgb(138, 126, 126);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,300;1,400&display=swap');
+ body{
+   font-family: 'Roboto', sans-serif;
+    } 
+       @media (min-width:600px) {
+   #headtag{
+justify-content:left;   }
+  } 
+  
+  a{
+   text-decoration: nones;
+  }

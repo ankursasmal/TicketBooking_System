@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ticketing Booking</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body >
+    <header> 
+ <nav >
+ <div style="display: flex; align-items:center;height: 50px;justify-content: space-evenly; ">
+    <a>Bubble.io</a>
+    <div style="display: flex;align-items: center; width: 150px;">
+ 
+<a style="padding:  15px;">Customer section</a>
+<a>Services Provide</a>
+</div>
+</div>
+ </nav>
+ </header>   
+    <main>
+        <section> 
+     <h1>Book Your Ticket</h1>
+    <br/>
+    <div style="display: flex;align-items: center;justify-content: space-evenly; flex-direction: row; flex-wrap: wrap; ">
+    
+ <div style="display: flex;align-items: center; ">
+
+    <label for="Type">medium Type:</label><br/>
+    <select name="medium" id="medium" required>
+         <option value="Train">Train</option>
+         <option value="Bus">Bus</option>
+         <option value="Car">Car</option>
+         <option value="airplane">airplane</option>
+         <option value="ship">Ship</option>
+
+
+        </select>
+</div>
+<div style="display: flex;flex-direction: columns; border: .2px solid black;width: 180px;height: 270px;padding: 10px 10px;">
+
+ <form action="./paymentpage.html" method="post">
+    <div style="display: flex;flex-direction: column; ">
+name:<input type="text" placeholder="name">
+lastname:<input type="text" placeholder="lastname">
+Email:<input type="email" placeholder="valid email">
+phone.no:<input type="number" placeholder="phone">
+Address:<input type="text" placeholder="address">
+<div style="display: flex;align-items: center;">
+<input type="checkbox">above information true and right.</div>
+    <button type="submit" style="margin: 10px 20px;" >payNow</button>
+    </div>
+</form> 
+   </div>
+    
+</div>
+</div>
+  </section>
+<section>
+
+</section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .ticket {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .event-details {
+            margin-top: 20px;
+        }
+        p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .barcode {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <nav >
+        <div style="display: flex; align-items:center;height: 50px;justify-content: space-evenly; ">
+           <a>Bubble.io</a>
+           <div style="display: flex;align-items: center; width: 150px;">
+        
+       <a style="padding:  15px;">Customer section</a>
+       <a>Services Provide</a>
+       </div>
+       </div>
+        </nav>
+        </header>  
+        <main>
+            <section>  
+    <div class="ticket">
+        <h2>Event Ticket</h2>
+        
+        <div class="event-details">
+            <p><strong>Event:</strong> Your Event Name</p>
+            <p><strong>Date:</strong> February 15, 2024</p>
+            <p><strong>Time:</strong> 7:00 PM</p>
+            <p><strong>Venue:</strong> Venue Name, City</p>
+        </div>
+
+        <div class="barcode">
+            <!-- You can replace the following with an actual barcode image or code -->
+            <img src="barcode.png" alt="Barcode">
+        </div>
+    </div>
+
+    <div style="display: flex;flex-direction: row;  justify-content: space-around;">
+        <a href="./status.html"><button >Status</button></a>
+       <a href="./Cancilation.html"><button>Cancel</button></a>
+</div>
+</section>
+</main>
+</body>
+</html>

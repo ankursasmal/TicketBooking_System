@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback and Ticketing System - Home</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body >
+    <header> 
+ <nav >
+ <div style="display: flex; align-items:center;height: 50px;justify-content: space-evenly; ">
+    <a>Bubble.io</a>
+    <div style="display: flex;align-items: center; width: 150px;">
+ 
+<a style="padding:  15px;">Customer section</a>
+<a>Services Provide</a>
+</div>
+</div>
+ </nav>
+ </header>   
+    <main>
+        <section> 
+     <h1>Customer Feedback Form</h1>
+    <br/>
+    <div style="display: flex;align-items: center;justify-content: space-evenly; flex-direction: row; flex-wrap: wrap; ">
+    
+ <div style="display: flex;align-items: center; ">
+
+    <label for="feedbackType">Feedback Type:</label><br/>
+    <select name="feedbackType" id="feedbackType" required>
+         <option value="Feedback">Feedback</option>
+
+        <option value="complaint">Complaint</option>
+        <option value="inquiry">Inquiry</option>
+    </select>
+</div>
+<div style="display: block;visibility:hidden;display: flex;flex-direction: columns; border: .2px solid black;width: 180px;height: 160px;padding: 10px 10px;">
+
+ <form action="./submit_feedback" method="post">
+    <div style="display: flex;flex-direction: column; ">
+
+   <div style="display: flex;flex-direction: row; ">
+
+    <label for="feedbackMessage">Your Feedback:</label>
+    <select style="justify-content: flex-end;" name="ratting" id="ratting" required>
+        <option value="1">1 star</option>
+        <option value="2">2 star</option>
+        <option value="3">3 star</option>
+        <option value="4">4 star</option>
+        <option value="5">5 star</option>
+
+    </select>   
+</div>
+     <textarea style="margin-top: 15px;" name="feedbackMessage" id="feedbackMessage" rows="4" required placeholder="review Section" ></textarea>
+
+    <button type="submit" style="margin: 10px 20px;" >Submit Feedback</button>
+    </div>
+</form> 
+   </div>
+   <!-- complaiint sce -->
+   <div style="display: block;visibility: hidden;display: flex;flex-direction: columns; border: .2px solid black;width: 270px;height: 150px;padding: 15px 15px;">
+
+    <form action="./submit_Complaint.html" method="post">
+       <div style="display: flex;flex-direction: column; ">
+   
+      <div style="display: flex;flex-direction: row; ">
+   
+       <label for="feedbackcomplaint">Select specific Complaint:</label>
+       <select style="justify-content: flex-end;" name="ratting" id="ratting" required>
+           <option value="Refand">Refand</option>
+           <option value="Payment Procesing">Payment Procesing</option>
+           <option value="server Problemb">server Problemb</option>
+            
+       </select>   
+   </div>
+        <textarea style="margin-top: 15px;" name="feedbackcomplaint" id="feedbackcomplaint" rows="4" required placeholder="Enter Complaint" ></textarea>
+   
+       <button type="submit" style="margin: 10px 20px;" >Submit</button>
+       </div>
+   </form> 
+      </div>
+      <!-- inquery -->
+    <div style="display: block;display: flex;flex-direction: columns; border: .2px solid black;width: 270px;height: 150px;padding: 15px 15px;">
+
+        <form action="./submit_inquery" method="post">
+           <div style="display: flex;flex-direction: column; ">
+       
+          <div style="display: flex;flex-direction: row; ">
+       
+           <label for="feedbackcomplaint">Select specific inquery:</label>
+           <select style="justify-content: flex-end;" name="ratting" id="ratting" required>
+               <option value="Ammount">Ammount</option>
+               <option value=" time table">time table</option>
+               <option value="services">time table</option>
+               <option value="Payment Medium">Payment Medium</option>
+               <option value="Ticket Cancelation">Ticket Cancelation</option>
+
+
+                
+           </select>   
+       </div>
+            <textarea style="margin-top: 15px;" name="feedbackInqury" id="feedbackInqury" rows="4" required placeholder="Enter inquery" ></textarea>
+       
+           <button type="submit" style="margin: 10px 20px;" >Submit</button>
+           </div>
+       </form> 
+          </div>
+</div>
+</div>
+  </section>
+<section>
+
+</section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
