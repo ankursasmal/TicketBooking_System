@@ -22,7 +22,7 @@
 
 </div>
 <div  >
-<div  style="align-items: center;height: 250px;width: 300px; border:0.2px solid black; margin-bottom: 12px; padding: 0px 15px;">
+<div  style="align-items: center;height: 270px;width: 300px; border:0.2px solid black; margin-bottom: 12px; padding: 0px 15px;">
 <div style="display:flex;flex-direction: column; margin-bottom: 12px;">
     <h1>Reset your Password
     </h1> 
@@ -31,29 +31,29 @@
      <a style=" margin-bottom: 15px; ">Enter your email address. We'll email you instructions to reset your password.  
 
      </a> 
-     <form action="./Forgotpassworenter.html"  id="resetpass">
+     <form  method="post" id="passwordreenter">
         <div style="display:flex;flex-direction: column; margin-bottom: 12px;">
- 
-    Email:
-    <input style=" margin: 15px 0px;" type="email" name="" id="passwordemail" placeholder="enter valid emailId">
+
+    password:
+    <input style=" margin: 15px 0px;" type="password" name="" id="pass1" placeholder="enter valid password" required minlength="8">
      
-     <div style="display:flex;align-items:center;justify-content:space-evenly;flex-direction: row; margin-bottom: 12px;">
-        <a href="./signIn.html" style="padding: 2px ; border: .02px solid black;">Back to Sign In</a>
-         <button type="submit">Submit</button>
+    confirm password:
+    <input style=" margin: 15px 0px;" type="password" name="" id="pass2" placeholder="confirm password" required  minlength="8">
+    
+           <button style="margin: 0 100px;" type="submit" id="submit">Submit</button>
+           </div>
+        </form>
+         </div>
         </div>
-        </div>
-    </form>
-        </div>
-        </div>
-
-        <!-- <div id="result">
-
-        </div> -->
 </section>
+<div id="result">
+
+</div>
     </main>
     <footer style="bottom: 0px; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white;">
         <p style="padding:4 40px ;">copy right@ 2024-25 </p>
             </footer>
+    <script src="all.js"></script>
     <script src="./all.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </body>

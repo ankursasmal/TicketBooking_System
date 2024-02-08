@@ -14,14 +14,14 @@
     <div style="display: flex;align-items: center; width: 150px;">
  
 <a style="padding:  15px;">Customer section</a>
-<a>Services Provide</a>
+<a href="./TicketBook.html">Services Provide</a>
 </div>
 </div>
  </nav>
  </header>   
     <main>
         <section> 
-     <h1>Customer Feedback Form</h1>
+     <h1 id="typeo">Customer Feedback Form</h1>
     <br/>
     <div style="display: flex;align-items: center;justify-content: space-evenly; flex-direction: row; flex-wrap: wrap; ">
     
@@ -35,9 +35,9 @@
         <option value="inquiry">Inquiry</option>
     </select>
 </div>
-<div style="display: block;visibility:hidden;display: flex;flex-direction: columns; border: .2px solid black;width: 180px;height: 160px;padding: 10px 10px;">
+<div id="feed" style="  display: flex;flex-direction: columns; border: .2px solid black;width: 180px;height: 160px;padding: 10px 10px;">
 
- <form action="./submit_feedback" method="post">
+ <form action="./submit_feedback">
     <div style="display: flex;flex-direction: column; ">
 
    <div style="display: flex;flex-direction: row; ">
@@ -59,9 +59,9 @@
 </form> 
    </div>
    <!-- complaiint sce -->
-   <div style="display: block;visibility: hidden;display: flex;flex-direction: columns; border: .2px solid black;width: 270px;height: 150px;padding: 15px 15px;">
+   <div id="com" style="display: block;visibility: hidden;display: flex;flex-direction: columns; border: .2px solid black;width: 270px;height: 150px;padding: 15px 15px;">
 
-    <form action="./submit_Complaint.html" method="post">
+    <form action="./submit_Complaint.html">
        <div style="display: flex;flex-direction: column; ">
    
       <div style="display: flex;flex-direction: row; ">
@@ -81,7 +81,7 @@
    </form> 
       </div>
       <!-- inquery -->
-    <div style="display: block;display: flex;flex-direction: columns; border: .2px solid black;width: 270px;height: 150px;padding: 15px 15px;">
+    <div id="inq" style="display: block;visibility: hidden;display: flex;flex-direction: columns; border: .2px solid black;width: 270px;height: 150px;padding: 15px 15px;">
 
         <form action="./submit_inquery" method="post">
            <div style="display: flex;flex-direction: column; ">
@@ -113,8 +113,9 @@
 
 </section>
     </main>
-    <footer>
-
-    </footer>
+    <footer style="bottom: 0px; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white;">
+        <p style="padding:4 40px ;">copy right@ 2024-25 </p>
+            </footer>
+            <script src="./all.js"></script>
 </body>
 </html>

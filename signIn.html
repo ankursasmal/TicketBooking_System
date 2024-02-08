@@ -10,7 +10,7 @@
 <body >
     <header> 
  <nav >
- <div style="display: flex; align-items:center;height: 50px;justify-content: space-around; font-size: 25px;">
+ <div style="display: flex; align-items:center;height: 50px;justify-content: space-around; font-size: 12px;">
     <a>Bubble.io</a>
     <button >Sign Up/sign IN</button>
 </nav>
@@ -32,18 +32,18 @@
    <a href="./SignUp.html"><span >Sign Up</span></a>
     </div> 
     <hr style=" margin-bottom: 12px; "/>
-        <form action="./Ticketing_System-Home.html"> 
+        <form  action="./Ticketing_System-Home.html" id="signIn"> 
             <div style="display:flex;flex-direction: column; margin-bottom: 12px;">
 
 Email:
-    <input style=" margin-bottom: 12px;" type="email" name="" id="" placeholder="enter valid emailId">
+    <input style=" margin-bottom: 12px;" type="email" name="" id="signemail" placeholder="enter valid emailId " required>
     password:
-    <input style=" margin-bottom: 12px;" type="password" name="" id="" placeholder="enter password">
+    <input style=" margin-bottom: 12px;" type="password" name="" id="signpassword" placeholder="enter password" required  minlength="8">
     
 <div style="display:flex;align-items:center;justify-content: right;flex-direction: row;  margin-bottom: 12px;">
    <a href="./forgotPassword.html">  Forget password? </a>  
     </div>
- <button style="margin: 10px 125px; " type="submit">Sign In</button>
+ <button style="margin: 10px 125px; "  type="submit">Sign In</button>
 
 </div>
 </form>
@@ -62,9 +62,11 @@ Email:
         </div>
 </section>
     </main>
-    <footer>
-
-    </footer>
+    <footer style="bottom: 0px; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white;">
+        <p style="padding:4 40px ;">copy right@ 2024-25 </p>
+            </footer>
+        <script src="all.js"></script>
+    <script src="./all.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </body>
 </html>
