@@ -31,7 +31,7 @@
      <a style=" margin-bottom: 15px; ">Enter your email address. We'll email you instructions to reset your password.  
 
      </a> 
-     <form  method="post" id="passwordreenter">
+     <form action="" id="passwordreenter">
         <div style="display:flex;flex-direction: column; margin-bottom: 12px;">
 
     password:
@@ -40,7 +40,7 @@
     confirm password:
     <input style=" margin: 15px 0px;" type="password" name="" id="pass2" placeholder="confirm password" required  minlength="8">
     
-           <button style="margin: 0 100px;" type="submit" id="submitpass">Submit</button>
+           <button style="margin: 0 100px;" type="submit" id="submitpass" >Submit</button>
            </div>
         </form>
          </div>
@@ -57,14 +57,16 @@
             </footer>
      <script>
         let passwordreenter=document.getElementById('passwordreenter');
-
-passwordreenter.addEventListener('submit',function(e){
+//  a casa function under likha darkar nai karon karaon page ka redirect korbo na
+// only message print korb on submit event a form a action or redirect
+// korta hola tobai function under likha hoi
+         passwordreenter.addEventListener('submit',function(e){
  e.preventDefault();
 let pass1=document.getElementById('pass1').value;
 let pass2=document.getElementById('pass2').value;
  
 fetch("https://jsonplaceholder.typicode.com/posts", {
-    method:'POST',
+    method:'PUT',
     body: JSON.stringify({
        password: pass1,
        password1: pass2,
@@ -81,6 +83,7 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
           
  })
 })
+ 
 //  let submitpass=document.getElementById('submitpass');
 // submitpass.addEventListener('click',()=>{
 //     pass1="";

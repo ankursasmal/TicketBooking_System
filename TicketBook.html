@@ -20,7 +20,7 @@
  </nav>
  </header>   
     <main>
-        <section> 
+       
      <h1>Book Your Ticket</h1>
     <br/>
     <div style="display: flex;align-items: center;justify-content: space-evenly; flex-direction: row; flex-wrap: wrap; ">
@@ -38,8 +38,11 @@
 
         </select>
 </div>
-<div style="display: flex;flex-direction: columns; border: .2px solid black;width: 180px;height: 270px;padding: 10px 10px;">
+<div style="display: flex;align-items: center; margin-bottom: 20px;flex-direction: column; ">
 
+<h1 id="vaical">ticket Book for</h1>
+
+<div style="display: flex;flex-direction: columns; border: .2px solid black;width: 180px;height: 270px;padding: 10px 10px;">
  <form action="./paymentpage.html" >
     <div style="display: flex;flex-direction: column; ">
 name:<input type="text" placeholder="name"  >
@@ -56,6 +59,7 @@ Address:<input type="text" placeholder="address">
     
 </div>
 </div>
+ 
   </section>
 <section>
 
@@ -64,5 +68,15 @@ Address:<input type="text" placeholder="address">
     <footer style="bottom: 0px; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white;">
         <p style="padding:4 40px ;">copy right@ 2024-25 </p>
             </footer>
+            <script >
+            let medium=document.querySelector('#medium');
+            let vaical=document.querySelector('#vaical');
+
+           medium.addEventListener('change',(e)=>{
+            e.preventDefault();
+            vaical.innerHTML=`<p>Ticket Booking for ${e.target.value}</p>`
+
+           })  
+            </script>
 </body>
 </html>
