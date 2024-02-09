@@ -5,7 +5,7 @@ let a= cancil.addEventListener('change',(e)=>{
   return e.target.value;
  
 })
-// export function onchang(){
+export function onchang(){
    
-// return a;
-// }
+return a;
+}
