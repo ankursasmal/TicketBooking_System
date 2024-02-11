@@ -30,13 +30,14 @@
 
  <form action="./Canciltation_Status.html">
     <div style="display: flex;flex-direction: column; ">
-    <h5>Reason:</h5>
+    <h5 id="h">Reason:</h5>
      <textarea style="margin-top: 15px;" name="cancil" id="cancil" rows="4" required placeholder="reason for cancilation" ></textarea>
      <div style="display: flex;flex-direction: row; ">
 
      <input type="checkbox" name="" id="cancile" required>Are you confirm!</div>
-    <button type="submit" style="margin: 10px 22px;" >Submit</button>
-    </div>
+    <button type="submit" style="margin: 10px 22px;">Submit</button>
+    
+<p id="pi">ank</p></div>
 </form> 
    </div>
    <!-- complaiint sce -->
@@ -52,6 +53,25 @@
         <p style="padding:4 40px ;">copy right@ 2024-25 </p>
 
     </footer>
-<script  src="./cancil.js"></script>
+<!-- <script  src="./Cancilation.js"></script> -->
+<script>
+
+
+// akta button opor akadhik event lagano jai
+// but sab gulo alada alda eventlistnrer likta hoba
+
+
+    let a=document.getElementById("cancil");
+    let d=document.getElementById("pi");
+
+    let b=document.getElementById("h");
+  d.addEventListener('dblclick',()=>{
+    a.style.visibility="hidden";
+  })
+ d.addEventListener('click',()=>{
+a.style.visibility="visible";
+    })
+    
+</script>
 </body>
 </html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback and Ticketing System - Home</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body >
+     <header> 
+ <nav >
+ <div style="display: flex; align-items:center;height: 50px;justify-content: space-between;padding:0px 20px; ">
+    <a href="./index.html">Bubble.io</a>
+    <div style="display: flex;align-items: center;justify-content: space-between; width: 300px;">
+ 
+<a style="padding:  15px;" id="custom" >Customer section</a>
+<a href="./TicketBook.html">Services Provide</a>
+</div>
+</div>
+ </nav>
+ </header>   
+    <main>
+        <section> 
+     <h1 id="typeo">Customer Feedback Form</h1>
+    <br/>
+    <div style="display: flex;align-items: center;justify-content: space-evenly; flex-direction: row; flex-wrap: wrap; ">
+    
+ <div style="display: flex;align-items: center; ">
+
+    <label for="feedbackType">Feedback Type:</label><br/>
+    <select name="feedbackType" id="feedbackType"  >
+        <option value="select">select</option>
+
+         <option value="Feedback">Feedback</option>
+
+        <option value="Complaint">Complaint</option>
+        <option value="Inquiry">Inquiry</option>
+    </select>
+</div>
+<div id="feed" style="   display: flex;flex-direction: columns; border: .2px solid black;width: 180px;height: 160px;padding: 10px 10px;">
+
+ <form action="" method="post">
+    <div style="display: flex;flex-direction: column; ">
+
+   <div style="display: flex;flex-direction: row; ">
+
+    <label for="feedbackMessage">Your Feedback:</label>
+    <select style="justify-content: flex-end;" name="ratting" id="ratting" required>
+        <option value="1">1 star</option>
+        <option value="2">2 star</option>
+        <option value="3">3 star</option>
+        <option value="4">4 star</option>
+        <option value="5">5 star</option>
+
+    </select>   
+</div>
+     <textarea style="margin-top: 15px;" name="feedbackMessage" id="feedbackMessage" rows="4" required placeholder="review Section" ></textarea>
+     <button type="submit" id="" style="margin: 10px 20px;" >Submit  </button>
+
+     </div>
+</form> 
+   </div>
+   <div id="result1"></div>
+
+   <!-- complaiint sce -->
+   <div id="com" style="display: flex;flex-direction: columns; border: .2px solid black;width: 270px;height: 150px;padding: 15px 15px;">
+
+    <form action="" method="post" >
+       <div style="display: block;display: flex;flex-direction: column; ">
+   
+      <div style="display: flex;flex-direction: row; ">
+   
+       <label for="feedbackcomplaint">Select specific Complaint:</label>
+       <select style="justify-content: flex-end;" name="ratting" id="ratting" required>
+           <option value="Refand">Refand</option>
+           <option value="Payment Procesing">Payment Procesing</option>
+           <option value="server Problemb">server Problemb</option>
+            
+       </select>   
+   </div>
+        <textarea style="margin-top: 15px;" name="feedbackcomplaint" id="feedbackcomplaint" rows="4" required placeholder="Enter Complaint" ></textarea>
+   
+       <button type="submit" style="margin: 10px 20px;" >Submit</button>
+       </div>
+   </form> 
+      </div>
+      <div id="result2"></div>
+      <!-- inquery -->
+    <div id="inq" style="  display: flex;flex-direction: columns; border: .2px solid black;width: 270px;height: 150px;padding: 15px 15px;">
+
+        <form action="" method="post">
+           <div style="display: flex;flex-direction: column; ">
+       
+          <div style="display: flex;flex-direction: row; ">
+       
+           <label for="feedbackcomplaint">Select specific inquery:</label>
+           <select style="justify-content: flex-end;" name="ratting" id="ratting" required>
+               <option value="Ammount">Ammount</option>
+               <option value=" time table">time table</option>
+               <option value="services">time table</option>
+               <option value="Payment Medium">Payment Medium</option>
+               <option value="Ticket Cancelation">Ticket Cancelation</option>
+
+
+                
+           </select>   
+       </div>
+            <textarea style="margin-top: 15px;" name="feedbackInqury" id="feedbackInqury" rows="4" required placeholder="Enter inquery" ></textarea>
+       
+           <button type="submit" id="" style="margin: 10px 20px;" >Submit</button>
+           </div>
+       </form> 
+          </div>
+          <div id="result3"></div>
+
+</div >
+ </div>
+   </section>
+<section>
+
+</section>
+    </main>
+    <footer style="bottom: 0px;  position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white;">
+        <p style="padding:4 40px  ;">copy right@ 2024-25 </p>
+            </footer>
+            <script>
+                let typeo=document.getElementById('typeo');
+let com=document.getElementById('com');
+let feed=document.getElementById('feed');
+let inq=document.getElementById('inq');
+// let form1=document.getElementById('form1');
+let result1=document.getElementById('result1');
+let result2=document.getElementById('result2');
+let result3=document.getElementById('result3');
+ 
+
+
+// 
+
+let custom=document.getElementById('custom');
+
+ 
+// ues event listner to on click visible
+// on dblclick dissaper
+
+let d=document.createElement('div');
+  d.classList.add("boxx");
+   d.setAttribute("id","boxx");
+   let box=document.getElementById("boxx");
+
+   d.innerHTML=`<div style=" background-color:red;display: flex;flex-direction: column;padding: 5px 5px; margin-top:20px ;width: 150px;height: 200px;border: .5px solid black;">
+     <p>asdk</p>
+      <p>asdk</p>
+         <p>asdk</p>
+            <p>asdk</p>
+               <p>asdk</p>
+                  <p>asdk</p>
+
+      </div>` 
+            custom.insertAdjacentHTML("afterend",d.outerHTML);
+// d.style.visibility='hidden';
+
+       custom.addEventListener('dblclick',()=>{
+ d.style.visibility='visible';
+
+      })
+      custom.addEventListener('click',()=>{
+//   box.parentNode.removeChild(box);
+
+d.style.visibility='hidden'
+      })
+    //      d.parentNode.removeChild(d);
+//   d.outerhtml na lik la cholba na
+ 
+       //  d.addEventListener('click',()=>{
+//  d.parentNode.removeChild(d);
+// d.addEventListener('click', function() {
+//         // Check if the clicked element has the class 'boxx'
+ 
+
+// })//   custom.appendChild(d);
+    
+
+
+
+
+let sl1=document.getElementById('feedbackType');
+// after axcess then use eventlistner
+sl1.addEventListener('change',(e)=>{
+e.preventDefault();
+console.log(sl1.value);
+if(e.target.value==="select"){
+   typeo.innerText='Customer select sepcefic type of Form';
+   com.style.visibility="hidden";
+   com.style.display='block ';
+
+   inq.style.display="block" 
+
+   inq.style.visibility="hidden" 
+   feed.style.visibility="hidden" 
+   feed.style.display="block" 
+   result2.style.visibility="hidden" 
+   result3.style.visibility="hidden" 
+   result1.style.visibility="hidden"
+//    akadik created ele jannoforeach sab gulo axccess foreach
+   document.querySelectorAll('.bul').forEach(element => element.style.visibility='hidden');
+
+
+}
+else if(sl1.value==="Feedback"){
+   typeo.innerText='Customer Feedback Form';
+   com.style="visibility:hidden;display:block";
+   inq.style="visibility:hidden;display:block";
+   feed.style.visibility="visible" ;
+   result2.style.visibility="hidden" ;
+   result3.style.visibility="hidden" ;
+   result1.style.visibility="visible" 
+
+   bul.style.visibility='visible';
+
+}
+else if(sl1.value==="Complaint"){
+   typeo.innerText='Customer Complaint Form';
+   feed.style="visibility:hidden;display:block"; 
+   inq.style="visibility:hidden;display:block"; 
+
+   com.style.visibility="visible"; 
+   result1.style.visibility="hidden"; 
+   result3.style.visibility="hidden" ;
+   result2.style.visibility="visible" 
+   document.querySelectorAll('.bul').forEach(element => element.style.visibility='hidden');
+
+}
+else if(sl1.value==="Inquiry"){
+   typeo.innerText='Customer Inquiry Form';
+   com.style.cssText="visibility:hidden;display:block" ;
+
+   feed.style.cssText="visibility:hidden;display:block" ;
+   inq.style.visibility="visible" ;
+   result1.style.visibility="hidden"; 
+   result2.style.visibility="hidden" ;
+   result3.style.visibility="visible" 
+   document.querySelectorAll('.bul').forEach(element => element.style.visibility='hidden');
+
+
+}
+})
+
+// onsubmit funtion
+let feedbackMessage=document.getElementById("feedbackMessage").value;
+   let ratting=document.getElementById("ratting").value;
+
+    
+ 
+//  request post same page dakhata hola post under fun liktha pari
+feed.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    let feedbackMessage = document.getElementById("feedbackMessage").value;
+    let rating = document.getElementById("ratting").value;
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+            title: feedbackMessage,
+            rating: rating
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+//         console.log(data.title);
+//         console.log("feedbackMessage:", feedbackMessage);
+// console.log("rating:", rating);
+
+        let result1 = document.getElementById('result1');
+        let build = document.createElement("div");
+        build.setAttribute("class", "bul");
+        build.innerHTML = `<div style="display:flex;flex-direction: column;padding: 10px 5px;margin:10px 3px;  border:2px solid black;">
+            <p>type: ${feedbackMessage}</p>
+            <p>comment: Thank you for your valuable response...</p>
+            <p>rating: ${rating}</p>
+        </div>`;
+
+        result1.insertAdjacentHTML("afterend", build.outerHTML);
+
+        
+    })
+    .catch(error => {
+        console.error('Error:', error.message);
+        // Handle the error and provide feedback to the user
+        alert('An error occurred while submitting the form. Please try again later.');
+    });
+});
+
+ 
+com.addEventListener('submit',function(e){
+e.preventDefault();
+let feedbackcomplaint=document.getElementById('feedbackcomplaint').value;
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+   method:'POST',
+   body: JSON.stringify({
+      title: feedbackcomplaint,
+      
+       }),
+     headers: {
+       'Content-type': 'application/json; charset=UTF-8',
+     }, 
+
+}).then(function(res){ return res.json()}).then(function(data){
+   console.log(data.title);
+let result2=document.getElementById('result2');
+result2.innerHTML=`<p>Your complaint resolve soon... </p>` 
+})
+
+})
+
+inq.addEventListener('submit',function(e){
+e.preventDefault();
+let feedbackInqury=document.getElementById('feedbackInqury').value;
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+   method:'POST',
+   body: JSON.stringify({
+      title: feedbackInqury,
+      
+       }),
+     headers: {
+       'Content-type': 'application/json; charset=UTF-8',
+     }, 
+
+}).then(function(res){ return res.json()}).then(function(data){
+   console.log(data.title);
+let result3=document.getElementById('result3');
+result3.innerHTML=`<p>Please vist out home page buttom... </p>` 
+})
+
+})
+
+
+
+
+ 
+            </script>
+            
+
+        </body>
+</html>
