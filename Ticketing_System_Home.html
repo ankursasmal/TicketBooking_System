@@ -11,19 +11,18 @@
  <nav >
  <div style="display: flex; align-items:center;height: 50px;justify-content: space-between;padding:0px 20px; ">
     <a href="./index.html">Bubble.io</a>
-    <div style="display: flex;align-items: center;justify-content: space-between; width: 300px;">
- 
+  
 <a style="padding:  15px;" id="custom" >Customer section</a>
+ 
 <a href="./TicketBook.html">Services Provide</a>
-</div>
-</div>
+ </div>
  </nav>
  </header>   
     <main>
         <section> 
      <h1 id="typeo">Customer Feedback Form</h1>
     <br/>
-    <div style="display: flex;align-items: center;justify-content: space-evenly; flex-direction: row; flex-wrap: wrap; ">
+    <div   style="display: flex;align-items: center;justify-content: space-evenly; flex-direction: row; flex-wrap: wrap; ">
     
  <div style="display: flex;align-items: center; ">
 
@@ -105,7 +104,7 @@
                 
            </select>   
        </div>
-            <textarea style="margin-top: 15px;" name="feedbackInqury" id="feedbackInqury" rows="4" required placeholder="Enter inquery" ></textarea>
+            <textarea style="margin-top: 15px; " name="feedbackInqury" id="feedbackInqury" rows="4" required placeholder="Enter inquery" ></textarea>
        
            <button type="submit" id="" style="margin: 10px 20px;" >Submit</button>
            </div>
@@ -114,8 +113,7 @@
           <div id="result3"></div>
 
 </div >
- </div>
-   </section>
+    </section>
 <section>
 
 </section>
@@ -133,6 +131,7 @@ let result1=document.getElementById('result1');
 let result2=document.getElementById('result2');
 let result3=document.getElementById('result3');
  
+let bul=document.querySelectorAll('.bul');
 
 
 // 
@@ -144,54 +143,76 @@ let custom=document.getElementById('custom');
 // on dblclick dissaper
 
 let d=document.createElement('div');
-  d.classList.add("boxx");
-   d.setAttribute("id","boxx");
-   let box=document.getElementById("boxx");
-
-   d.innerHTML=`<div style=" background-color:red;display: flex;flex-direction: column;padding: 5px 5px; margin-top:20px ;width: 150px;height: 200px;border: .5px solid black;">
+    d.setAttribute("id","boxx");
+      //   two process to redirect another page
+    //   after 3 line
+ d.innerHTML=`<div style="position: fixed;top:29px;right:50%;background-color:red;display: flex;flex-direction: column;padding: 5px 5px; margin-top:20px ;width: 150px;height: 150px;border: .5px solid black;">
      <p>asdk</p>
-      <p>asdk</p>
-         <p>asdk</p>
+       <a id="Ticket">Ticket</a>
+          <a href=${"./status.html"} >new </a>
             <p>asdk</p>
                <p>asdk</p>
                   <p>asdk</p>
 
-      </div>` 
-            custom.insertAdjacentHTML("afterend",d.outerHTML);
-// d.style.visibility='hidden';
+      </div>`
 
+ 
+  
+  
+  custom.insertAdjacentHTML("afterend",d.outerHTML);
+  box2.style.visibility='hidden';
+
+//   a cas two evenet listner work but aladaq alda liktha ho ba
        custom.addEventListener('dblclick',()=>{
- d.style.visibility='visible';
+        // jakhan use korbo takhan create element k axcess korbo
+        let box2=document.getElementById('boxx');
+box2.style.visibility='visible';
 
       })
-      custom.addEventListener('click',()=>{
-//   box.parentNode.removeChild(box);
+     custom.addEventListener('click',()=>{
+             // jakhan use korbo takhan create element k axcess korbo
+   
+     let box2=document.getElementById('boxx');
 
-d.style.visibility='hidden'
-      })
-    //      d.parentNode.removeChild(d);
-//   d.outerhtml na lik la cholba na
- 
-       //  d.addEventListener('click',()=>{
-//  d.parentNode.removeChild(d);
-// d.addEventListener('click', function() {
-//         // Check if the clicked element has the class 'boxx'
- 
+box2.style.visibility='hidden'
+  })
+  
+  let Ticket=document.getElementById('Ticket');
+  
+  
 
-// })//   custom.appendChild(d);
-    
+// redirect page start
+      Ticket.addEventListener('click',()=>{
+         // Redirect to a new page when the element is clicked
+        window.location.href = "./Ticket.html";
+    });
+  // end
 
 
-
+// selsct item serccn effect
 
 let sl1=document.getElementById('feedbackType');
 // after axcess then use eventlistner
 sl1.addEventListener('change',(e)=>{
-e.preventDefault();
-console.log(sl1.value);
-if(e.target.value==="select"){
+e.preventDefault(); 
+document.addEventListener('DOMContentLoaded', function () {
+    // Check if the page is being loaded for the first time
+    if (!localStorage.getItem('pageLoaded')) {
+        // Set the flag in localStorage
+        localStorage.setItem('pageLoaded', 'true');
+
+        // Page is loaded for the first time, hide com, feed, and inq
+        document.getElementById('com').style.display = 'none';
+        document.getElementById('feed').style.display = 'none';
+        document.getElementById('inq').style.display = 'none';
+    }
+})
+   result2.style.visibility="hidden" 
+   result3.style.visibility="hidden" 
+   result1.style.visibility="hidden"
+ if(e.target.value==="select"){
    typeo.innerText='Customer select sepcefic type of Form';
-   com.style.visibility="hidden";
+   com.style.com="hidden";
    com.style.display='block ';
 
    inq.style.display="block" 
@@ -202,9 +223,13 @@ if(e.target.value==="select"){
    result2.style.visibility="hidden" 
    result3.style.visibility="hidden" 
    result1.style.visibility="hidden"
-//    akadik created ele jannoforeach sab gulo axccess foreach
-   document.querySelectorAll('.bul').forEach(element => element.style.visibility='hidden');
+   //    jakha na use jkorbo sakana axces korta hoba then use 
 
+   let bul=document.querySelectorAll('.bul');
+// now bul is a arr where contain many clas;
+   bul.forEach(element => {
+        element.style.display = 'none';
+    });
 
 }
 else if(sl1.value==="Feedback"){
@@ -216,8 +241,7 @@ else if(sl1.value==="Feedback"){
    result3.style.visibility="hidden" ;
    result1.style.visibility="visible" 
 
-   bul.style.visibility='visible';
-
+ 
 }
 else if(sl1.value==="Complaint"){
    typeo.innerText='Customer Complaint Form';
@@ -227,8 +251,14 @@ else if(sl1.value==="Complaint"){
    com.style.visibility="visible"; 
    result1.style.visibility="hidden"; 
    result3.style.visibility="hidden" ;
-   result2.style.visibility="visible" 
-   document.querySelectorAll('.bul').forEach(element => element.style.visibility='hidden');
+   result2.style.visibility="visible" ;
+   //    jakhana use jkorbo sakana axces korta hoba then use 
+
+   let bul=document.querySelectorAll('.bul');
+
+   bul.forEach(element => {
+        element.style.display = 'none';
+    });
 
 }
 else if(sl1.value==="Inquiry"){
@@ -239,9 +269,14 @@ else if(sl1.value==="Inquiry"){
    inq.style.visibility="visible" ;
    result1.style.visibility="hidden"; 
    result2.style.visibility="hidden" ;
-   result3.style.visibility="visible" 
-   document.querySelectorAll('.bul').forEach(element => element.style.visibility='hidden');
+   result3.style.visibility="visible" ;
+//    jakha na use jkorbo sakana axces korta hoba then use 
+   let bul=document.querySelectorAll('.bul');
 
+ 
+   bul.forEach(element => {
+        element.style.display = 'none';
+    });
 
 }
 })

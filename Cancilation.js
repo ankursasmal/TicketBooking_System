@@ -1,11 +1,12 @@
 let cancil=document.querySelector('#cancil');
- 
+let ty;
 let a= cancil.addEventListener('change',(e)=>{
     console.log(e.target.value);
+    ty=e.target.value;
+    console.log("ty",ty);
   return e.target.value;
- 
+
 })
-export function onchang(){
-   
-return a;
+ function onSubmit(){
+
 }
