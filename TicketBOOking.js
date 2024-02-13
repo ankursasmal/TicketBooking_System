@@ -13,11 +13,11 @@ let ticketbook=()=>{
 let ticket=document.getElementById('ticket');
 ticket.addEventListener('submit',(e)=>{
     e.preventDefault();
-    let name=document.getElementById('name');
-    let last=document.getElementById('last');
-    let Email=document.getElementById('Email');
-    let ph=document.getElementById('ph');
-    let add=document.getElementById('add');
+    let name=document.getElementById('name').value;
+    let last=document.getElementById('last').value;
+    let Email=document.getElementById('Email').value;
+    let ph=document.getElementById('ph').value;
+    let add=document.getElementById('add').value;
     fetch('https://jsonplaceholder.typicode.com/posts', {
 method: 'POST',
 body: JSON.stringify({
@@ -33,6 +33,8 @@ headers: {
 })   .then((res)=>{return res}).then((res)=>{return res.json()})
 .then((data)=>{
 console.log(data.name,data.ph,data.add,data.Email);
+ 
+
 }).catch(error=>{
 console.log(error);
 })

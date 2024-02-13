@@ -160,8 +160,7 @@ let d=document.createElement('div');
   
   
   custom.insertAdjacentHTML("afterend",d.outerHTML);
-  box2.style.visibility='hidden';
-
+ 
 //   a cas two evenet listner work but aladaq alda liktha ho ba
        custom.addEventListener('dblclick',()=>{
         // jakhan use korbo takhan create element k axcess korbo
@@ -195,18 +194,6 @@ let sl1=document.getElementById('feedbackType');
 // after axcess then use eventlistner
 sl1.addEventListener('change',(e)=>{
 e.preventDefault(); 
-document.addEventListener('DOMContentLoaded', function () {
-    // Check if the page is being loaded for the first time
-    if (!localStorage.getItem('pageLoaded')) {
-        // Set the flag in localStorage
-        localStorage.setItem('pageLoaded', 'true');
-
-        // Page is loaded for the first time, hide com, feed, and inq
-        document.getElementById('com').style.display = 'none';
-        document.getElementById('feed').style.display = 'none';
-        document.getElementById('inq').style.display = 'none';
-    }
-})
    result2.style.visibility="hidden" 
    result3.style.visibility="hidden" 
    result1.style.visibility="hidden"
@@ -226,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
    //    jakha na use jkorbo sakana axces korta hoba then use 
 
    let bul=document.querySelectorAll('.bul');
-// now bul is a arr where contain many clas;
+// now bul is a arr where contain many class it represent comment
    bul.forEach(element => {
         element.style.display = 'none';
     });
@@ -236,7 +223,7 @@ else if(sl1.value==="Feedback"){
    typeo.innerText='Customer Feedback Form';
    com.style="visibility:hidden;display:block";
    inq.style="visibility:hidden;display:block";
-   feed.style.visibility="visible" ;
+   feed.style.visibility="visible";
    result2.style.visibility="hidden" ;
    result3.style.visibility="hidden" ;
    result1.style.visibility="visible" 
@@ -290,7 +277,7 @@ let feedbackMessage=document.getElementById("feedbackMessage").value;
 //  request post same page dakhata hola post under fun liktha pari
 feed.addEventListener('submit', function (e) {
     e.preventDefault();
-
+// function under e .value direct axcess possible fun bira below line not possible
     let feedbackMessage = document.getElementById("feedbackMessage").value;
     let rating = document.getElementById("ratting").value;
 

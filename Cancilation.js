@@ -1,12 +1,15 @@
-let cancil=document.querySelector('#cancil');
-let ty;
-let a= cancil.addEventListener('change',(e)=>{
-    console.log(e.target.value);
-    ty=e.target.value;
-    console.log("ty",ty);
-  return e.target.value;
+  function valu(){     
+    const item=document.getElementById("can").value;
+     
+     localStorage.setItem('item1',item);
+     }
 
-})
- function onSubmit(){
 
-}
+
+     //  import export only html related hola kaj koraba ne
+// normal casa kaj orba 
+
+
+   //  export function mul(a,b,c){
+   //    return a+b+c;
+   //   }
