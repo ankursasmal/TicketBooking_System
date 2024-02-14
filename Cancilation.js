@@ -2,7 +2,7 @@
     const item=document.getElementById("can").value;
      
      localStorage.setItem('item1',item);
-     }
+  }
 
 
 
