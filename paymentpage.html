@@ -8,24 +8,24 @@
 </head>
 <body >
     <header> 
- <nav >
- <div style="display: flex; align-items:center;height: 50px;justify-content: space-evenly; ">
-    <a>Bubble.io</a>
-    <div style="display: flex;align-items: center; width: 150px;">
- 
-<a style="padding:  15px;">Customer section</a>
-<a>Services Provide</a>
-</div>
-</div>
- </nav>
- </header>   
-    <main>
+        <nav >
+        <div style="display: flex; align-items:center;height: 50px;justify-content: space-between;padding:0px 20px; ">
+           <a href="./index.html">Bubble.io</a>
+         
+       <a href="./Ticketing_System_Home.html">Customer section</a>
+        
+       <a href="./TicketBook.html" >Services Provide</a>
+        </div>
+        </nav>
+        </header>   
+         
+          <main>
         <section> 
             <div style="display: flex;align-items: center; flex-direction: column; flex-wrap: wrap;" >
       
      <h1>Payment Method:</h1>
     <br/>
-    <div style="display: flex; flex-direction: column; flex-wrap: nowrap;border: .2px solid black;width: 400px;height: 200px;padding: 10px 10px;margin: 10px 0px;" >
+    <div style="display: flex; flex-direction: column; flex-wrap: nowrap;border: .2px solid black;width: 270px;height: 200px;padding: 10px 10px;margin: 10px 0px;" >
         <div style="display: flex;align-items: center;justify-content: space-around; flex-direction: row; flex-wrap: wrap; ">
             <i class="fa-brands fa-cc-visa"></i>
             <i class="fa-brands fa-google-pay"></i>
@@ -36,15 +36,15 @@
   
  
  <form action="./Ticket.html">
-    <div style="display: flex;flex-direction: column;margin-bottom: 10px; ">
+    <div style="display: flex;flex-direction: column;margin-bottom: 10px;   ">
 card No:<input style="margin-bottom: 10px;" type="text" placeholder="16 digit " required  minlength="16">
- <div style="display: flex;align-items: center; margin-bottom: 10px;" >
-Expriration Date:<input type="number" placeholder="--/--" required>
-cvv:<input type="password" placeholder="---" required> 
+ <div style="display: flex;align-items: center; margin-bottom: 10px; flex-wrap:nowrap  ;" >
+Expriration Date:<input style="width: 60px;" type="number" placeholder="--/--" required>
+ cvv:<input style="width: 70px;" type="password" placeholder="---" required>  
    </div>
 
 Card HolderName:<input type="text" placeholder="Name" required>
-     <button type="submit" style="margin: 10px 120px;" >Confirm Payment</button>
+     <button type="submit" style="margin: 10px 90px;" >Confirm Payment</button>
      </div>
 </form> 
    </div>
@@ -55,9 +55,11 @@ Card HolderName:<input type="text" placeholder="Name" required>
 
 </section>
     </main>
-    <footer style="bottom: 0px; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white;">
-        <p style="padding:4 40px ;">copy right@ 2024-25 </p>
-            </footer>
+    <footer style="bottom: 0px;  display: flex;align-items: center; justify-content: space-around; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white; ">
+        <p style="color: rgb(27, 210, 186);">copy right@ 2024-25 </p>
+      <img src="./download.jpeg" alt="" width="20px" height="20px" style="object-fit: cover; border-radius: 50%;">
+               </footer>
+           
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="./paymentpage.js"></script>
 </body>

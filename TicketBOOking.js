@@ -8,6 +8,20 @@ vaical.innerHTML=`<p>Ticket Booking for ${e.target.value}</p>`
 }) 
 
 //    post api submit a redirect o haba
+let check=document.getElementById('check');
+check.addEventListener('click',()=>{
+  let name = document.getElementById('name').value;
+      let last = document.getElementById('last').value;
+      let Email = document.getElementById('Email').value;
+      let add = document.getElementById('add').value;
+
+      localStorage.setItem('name',name);
+      localStorage.setItem('last',last);
+      localStorage.setItem('add',add);
+
+      localStorage.setItem('email',Email);
+
+})
 
 let ticketbook = () => {
     let ticket = document.getElementById('ticket');
@@ -19,8 +33,7 @@ let ticketbook = () => {
       let Email = document.getElementById('Email').value;
       let ph = document.getElementById('ph').value;
       let add = document.getElementById('add').value;
-  
-      try {
+     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
           method: 'POST',
           body: JSON.stringify({

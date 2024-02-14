@@ -1,7 +1,7 @@
 let status=document.querySelector("#status");
 let va=localStorage.getItem('item1');
 console.log(va);
- status.innerHTML=`<p>your cancilation reason for ${va} proceded</p>`
+ status.innerHTML=`<p>your cancilation reason for :<b> ${va} </b> <br/><h3 style="color: rgb(56, 196, 217);">proceded<h3></p>`
 
 
 

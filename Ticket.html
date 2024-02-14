@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Ticket</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            /* background-color: #f4f4f4; */
         }
         .ticket {
             max-width: 400px;
@@ -26,55 +27,50 @@
             margin-top: 20px;
         }
         p {
-            margin: 10px 0;
-            color: #555;
+             color: #555;
         }
-        .barcode {
-            text-align: center;
-            margin-top: 20px;
-        }
+         
     </style>
 </head>
 <body>
     <header> 
         <nav >
-        <div style="display: flex; align-items:center;height: 50px;justify-content: space-evenly; ">
-           <a>Bubble.io</a>
-           <div style="display: flex;align-items: center; width: 150px;">
+        <div style="display: flex;     background-color: rgb(138, 126, 126);
+        ;align-items:center;height: 50px;justify-content: space-between;padding:0px 20px; ">
+           <a href="./index.html">Bubble.io</a>
+         
+       <a  href="./Ticketing_System_Home.html" >Customer section</a>
         
-       <a style="padding:  15px;">Customer section</a>
-       <a>Services Provide</a>
-       </div>
-       </div>
+       <a href="./TicketBook.html">Services Provide</a>
+        </div>
         </nav>
-        </header>  
-        <main>
+        </header>   
+         <main>
             <section>  
     <div class="ticket">
         <h2> Ticket</h2>
         
         <div class="event-details">
-            <p><strong>Name:</strong>Ankur</p>
-            <p><strong>Date:</strong> February 15, 2024</p>
-            <p><strong>Time:</strong> 7:00 PM</p>
-            <p><strong>city:</strong>Haldia</p>
-        </div>
-
-        <!-- <div class="barcode">
-            You can replace the following with an actual barcode image or code
-            <img src="barcode.png" alt="Barcode">
-        </div> -->
+            <div style="display: flex;margin: 10px 0px;">  <strong>Name:</strong> <p id="name"> Ankur</p></div>
+            <div style="display: flex; "> <strong>Date:</strong>  <p id="email"> February 15, 2024</p></div>
+             <div style="display: flex;margin: 10px 0px;"> <strong>Time:</strong> <p id="date"> 7:00 PM</p></div>
+                 <div style="display: flex;margin-bottom: 10px;"><strong>city:</strong><p id="add">Haldia</p></div>
+         </div>
+ 
+        
     </div>
 
-    <div style="display: flex;flex-direction: row;  justify-content: space-around;">
-        <a href="./status.html"><button >Status</button></a>
-       <a href="./Cancilation.html"><button>Cancel</button></a>
+    <div style="display: flex;flex-direction: row; align-items: center;padding-left: 39%;">
+        <a href="./status.html" style="padding-right: 60px;"><button style=" background-color: rgb(100, 100, 236); color: white;">Status</button></a>
+       <a href="./Cancilation.html" ><button style="background-color: rgb(221, 102, 102) ;color: white;">Cancel</button></a>
 </div>
 </section>
 </main>
-<footer style="bottom: 0px; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white;">
-    <p style="padding:4 40px ;">copy right@ 2024-25 </p>
-        </footer>
-        <script src="./Ticket.js"> </script>
+<footer style="bottom: 0px;  display: flex;align-items: center; justify-content: space-around; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white; ">
+    <p style="color: rgb(27, 210, 186);">copy right@ 2024-25 </p>
+  <img src="./download.jpeg" alt="" width="20px" height="20px" style="object-fit: cover; border-radius: 50%;">
+           </footer>
+     
+    <script src="./Ticket.js"> </script>
 </body>
 </html>

@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body >
-    <header> 
- <nav >
- <div style="display: flex; align-items:center;height: 50px;justify-content: space-evenly; ">
-    <a>Bubble.io</a>
-    <div style="display: flex;align-items: center; width: 150px;">
- 
-<a style="padding:  15px;">Customer section</a>
-<a>Services Provide</a>
-</div>
-</div>
- </nav>
- </header>   
-    <main>
+  <header> 
+    <nav >
+    <div style="display: flex; align-items:center;height: 50px;justify-content: space-between;padding:0px 20px; ">
+       <a href="./index.html">Bubble.io</a>
+     
+   <a href="./Ticketing_System_Home.html">Customer section</a>
+    
+   <a  >Services Provide</a>
+    </div>
+    </nav>
+    </header>   
+     
+     <main>
        
      <h1>Book Your Ticket</h1>
     <br/>
@@ -51,7 +51,7 @@ Email:<input type="email" placeholder="valid email" id="Email" >
 phone.no:<input type="number" placeholder="phone"  id="ph"> 
 Address:<input type="text" placeholder="address" id="add">
 <div style="display: flex;align-items: center;">
-<input type="checkbox" required>above information true and right.</div>
+<input type="checkbox" id="check" required>above information true and right.</div>
     <button type="submit" style="margin: 10px 20px;" onsubmit="return ticketbook()">payNow</button>
     </div>
 </form> 
@@ -65,9 +65,11 @@ Address:<input type="text" placeholder="address" id="add">
 
 </section>
     </main>
-    <footer style="bottom: 0px; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white;">
-        <p style="padding:4 40px ;">copy right@ 2024-25 </p>
-            </footer>
+    <footer style="bottom: 0px;  display: flex;align-items: center; justify-content: space-around; position: fixed;height: 30px ;background-color: rgb(29, 60, 60); width: 100vw;color: white; ">
+      <p style="color: rgb(27, 210, 186);">copy right@ 2024-25 </p>
+    <img src="./download.jpeg" alt="" width="20px" height="20px" style="object-fit: cover; border-radius: 50%;">
+             </footer>
+       
             <script  src="./TicketBOOking.js">
          </script>
 </body>

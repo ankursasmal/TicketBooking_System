@@ -18,3 +18,30 @@ justify-content:left;   }
    text-decoration: none;
    
   }
+  #sinup{
+
+             background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #box{padding: 10px;
+         background-color: #fff;
+         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+   }
+#forgot{
+          background-color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#pass{
+   padding: 20px;
+         background-color: #fff;
+         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+   
+
+#canci{
+   padding: 20px;
+   background-color: #fff;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+} 
