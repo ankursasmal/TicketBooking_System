@@ -45,11 +45,11 @@
 <div style="display: flex;flex-direction: columns; border: .2px solid black;width: 180px;height: 270px;padding: 10px 10px;">
  <form action="./paymentpage.html" id="ticket" >
     <div style="display: flex;flex-direction: column; ">
-name:<input type="text" placeholder="name" id="name"  >
-lastname:<input type="text" placeholder="lastname" id="last" > 
-Email:<input type="email" placeholder="valid email" id="Email" >
+name:<input type="text" placeholder="name" id="name" required >
+lastname:<input type="text" placeholder="lastname" id="last" required> 
+Email:<input type="email" placeholder="valid email" id="Email" required>
 phone.no:<input type="number" placeholder="phone"  id="ph"> 
-Address:<input type="text" placeholder="address" id="add">
+Address:<input type="text" placeholder="address" id="add" required>
 <div style="display: flex;align-items: center;">
 <input type="checkbox" id="check" required>above information true and right.</div>
     <button type="submit" style="margin: 10px 20px;" onsubmit="return ticketbook()">payNow</button>
