@@ -23,12 +23,12 @@ let d=document.createElement('div');
     d.setAttribute("id","boxx");
       //   two process to redirect another page
     //   after 3 line
- d.innerHTML=`<div style=" background-color: rgb(32, 155, 155);position: fixed;top:29px;right:50%; display: flex;flex-direction: column;padding: 5px 5px; margin-top:20px ;width: 150px;height: 100px;border: .5px solid black;">
-        <a href=${"./index.html"}>Home</a>
-<a href=${"././TicketBook.html"}>Book your Ticket</a>
-       <a id="Ticket">Ticket</a>
- <a href=${"./status.html"} >Booking History</a>
-            <a href=${"./Canciltation_Status.html"}>Cancilation status</a>
+ d.innerHTML=`<div style="  background-color: rgb(34, 235, 235); position: fixed;top:29px;right:50%; border-radius: 5px;;display: flex;flex-direction: column;padding: 5px 5px; margin-top:22px ;width: 140px;height: 135px;">
+        <a style="margin:7px 0;" href=${"./index.html"}>Home</a>
+<a style="margin-bottom: 7px;" href=${"././TicketBook.html"}>Book your Ticket</a>
+       <a  id="Ticket">Ticket</a>
+ <a  style="margin-top:7px;"href=${"./status.html"} >Booking History</a>
+            <a style="margin:7px 0;" href=${"./Canciltation_Status.html"}>Cancilation status</a>
  
       </div>`
 
@@ -36,15 +36,15 @@ let d=document.createElement('div');
   
   
   custom.insertAdjacentHTML("afterend",d.outerHTML);
- 
+   
 //   a cas two evenet listner work but aladaq alda liktha ho ba
-       custom.addEventListener('dblclick',()=>{
+       custom.addEventListener('click',()=>{
         // jakhan use korbo takhan create element k axcess korbo
         let box2=document.getElementById('boxx');
 box2.style.visibility='visible';
 
       })
-     custom.addEventListener('click',()=>{
+     custom.addEventListener('dblclick',()=>{
              // jakhan use korbo takhan create element k axcess korbo
    
      let box2=document.getElementById('boxx');
@@ -54,7 +54,7 @@ box2.style.visibility='hidden'
   
   let Ticket=document.getElementById('Ticket');
   
-  
+  Ticket.style.cssText="color:blue";
 
 // redirect page start
       Ticket.addEventListener('click',()=>{
