@@ -1,5 +1,5 @@
   
-                 let typeo=document.getElementById('typeo');
+   let typeo=document.getElementById('typeo');
 let com=document.getElementById('com');
 let feed=document.getElementById('feed');
 let inq=document.getElementById('inq');
@@ -10,12 +10,8 @@ let result3=document.getElementById('result3');
  
 let bul=document.querySelectorAll('.bul');
 
-
-// 
-
-let custom=document.getElementById('custom');
-
- 
+   
+let custom=document.getElementById('custom'); 
 // ues event listner to on click visible
 // on dblclick dissaper
 
@@ -23,7 +19,7 @@ let d=document.createElement('div');
     d.setAttribute("id","boxx");
       //   two process to redirect another page
     //   after 3 line
- d.innerHTML=`<div style="  background-color: rgb(34, 235, 235); position: fixed;top:29px;right:50%; border-radius: 5px;;display: flex;flex-direction: column;padding: 5px 5px; margin-top:22px ;width: 140px;height: 135px;">
+ d.innerHTML=`<div style="  background-color: rgb(34, 235, 235); position: fixed;top:29px;left:30%; border-radius: 5px;;display: flex;flex-direction: column;padding: 5px 5px; margin-top:22px ;width: 140px;height: 135px;">
         <a style="margin:7px 0;" href=${"./index.html"}>Home</a>
 <a style="margin-bottom: 7px;" href=${"././TicketBook.html"}>Book your Ticket</a>
        <a  id="Ticket">Ticket</a>
@@ -38,13 +34,13 @@ let d=document.createElement('div');
   custom.insertAdjacentHTML("afterend",d.outerHTML);
    
 //   a cas two evenet listner work but aladaq alda liktha ho ba
-       custom.addEventListener('click',()=>{
+       custom.addEventListener('dblclick',()=>{
         // jakhan use korbo takhan create element k axcess korbo
         let box2=document.getElementById('boxx');
 box2.style.visibility='visible';
 
       })
-     custom.addEventListener('dblclick',()=>{
+     custom.addEventListener('click',()=>{
              // jakhan use korbo takhan create element k axcess korbo
    
      let box2=document.getElementById('boxx');
