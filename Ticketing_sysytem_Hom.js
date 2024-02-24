@@ -19,7 +19,7 @@ let d=document.createElement('div');
     d.setAttribute("id","boxx");
       //   two process to redirect another page
     //   after 3 line
- d.innerHTML=`<div style="  background-color: rgb(34, 235, 235); position: fixed;top:29px;left:30%; border-radius: 5px;;display: flex;flex-direction: column;padding: 5px 5px; margin-top:22px ;width: 140px;height: 135px;">
+ d.innerHTML=`<div style="  background-color: rgb(34, 235, 235); position: fixed;top:29px;left:30%; border-radius: 5px;display: flex;flex-direction: column;padding: 5px 5px; margin-top:22px ;width: 140px;height: 135px;">
         <a style="margin:7px 0;" href=${"./index.html"}>Home</a>
 <a style="margin-bottom: 7px;" href=${"././TicketBook.html"}>Book your Ticket</a>
        <a  id="Ticket">Ticket</a>
@@ -30,22 +30,25 @@ let d=document.createElement('div');
 
  
   
-  
+//   outside of event listner insertAdjacentHTML korla 1 bar create hoba enntlist under korla
+// jato bar eventlistner cholba toto bar create hoba
+// so,outside of enentlistner a insertAdjacentHTML kora hoacha
   custom.insertAdjacentHTML("afterend",d.outerHTML);
-   
-//   a cas two evenet listner work but aladaq alda liktha ho ba
+
+ //   a casa two evenet listner work but aladaq alda liktha hoba nested mana 1 under 1 korla hoba na 
        custom.addEventListener('dblclick',()=>{
         // jakhan use korbo takhan create element k axcess korbo
-        let box2=document.getElementById('boxx');
-box2.style.visibility='visible';
+                 let box2=document.getElementById('boxx');
 
+box2.style.visibility='visible';
+        
       })
      custom.addEventListener('click',()=>{
              // jakhan use korbo takhan create element k axcess korbo
-   
-     let box2=document.getElementById('boxx');
+      let box2=document.getElementById('boxx');
 
 box2.style.visibility='hidden'
+   
   })
   
   let Ticket=document.getElementById('Ticket');
@@ -65,13 +68,26 @@ box2.style.visibility='hidden'
 let sl1=document.getElementById('feedbackType');
 // after axcess then use eventlistner
 sl1.addEventListener('change',(e)=>{
-e.preventDefault(); 
+e.preventDefault();
+ 
+    typeo.innerText='Customer select sepcefic type of Form';
+    com.style.visibility="hidden";
+    com.style.display='block ';
+ 
+    inq.style.display="block" 
+ 
+    inq.style.visibility="hidden" 
+    feed.style.visibility="hidden" 
+    feed.style.display="block" 
+
+// result1,2,3 are feed,com,inq created div 
    result2.style.visibility="hidden" 
    result3.style.visibility="hidden" 
    result1.style.visibility="hidden"
+   
  if(e.target.value==="select"){
    typeo.innerText='Customer select sepcefic type of Form';
-   com.style.com="hidden";
+   com.style.visibility="hidden";
    com.style.display='block ';
 
    inq.style.display="block" 
@@ -82,10 +98,11 @@ e.preventDefault();
    result2.style.visibility="hidden" 
    result3.style.visibility="hidden" 
    result1.style.visibility="hidden"
-   //    jakha na use jkorbo sakana axces korta hoba then use 
+   //    jakha na use jkorbo sakana axces korta hoba then use all tag,ele,id..
 
+//    bul holo feed back ar create kora commetnt div 
    let bul=document.querySelectorAll('.bul');
-// now bul is a arr where contain many class it represent comment
+// querySelectorAll axcee hoa sab ele array,so bul is a arr where contain many class it represent comment
    bul.forEach(element => {
         element.style.display = 'none';
     });
