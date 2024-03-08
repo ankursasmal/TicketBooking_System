@@ -75,4 +75,19 @@ let ticketbook = () => {
 
 //   const storedData = localStorage.getItem('postData');
 // console.log('Retrieved data from localStorage:', storedData);
-  
+
+  medium.addEventListener('click',()=>{
+    e.preventDefault();
+async function fun(){
+ 
+ try{ 
+  let res=await fetch('https://parallelum.com.br/fipe/api/v1');
+ let data=await res.json();
+console.log('anku');
+ }
+ catch(e){
+  console.log(e);
+ }
+}
+
+  })
