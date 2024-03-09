@@ -76,18 +76,27 @@ let ticketbook = () => {
 //   const storedData = localStorage.getItem('postData');
 // console.log('Retrieved data from localStorage:', storedData);
 
-  medium.addEventListener('click',()=>{
-    e.preventDefault();
+ 
+
+// select by api value normal fun crraete and dynamical option crate at last fun();
+// not required any eventlistner
 async function fun(){
  
- try{ 
-  let res=await fetch('https://parallelum.com.br/fipe/api/v1');
- let data=await res.json();
-console.log('anku');
+  try{ 
+   let res=await fetch('https://parallelum.com.br/fipe/api/v1/carros/marcas/59/modelos');
+  let data=await res.json();screen
+  let {anos}=data;
+ for (let e of anos ) {
+    let div1=document.createElement('div');
+   div1.setAttribute('class','valces');
+   div1.innerHTML=`<option>${e.nome}</option>`;
+   
+   let transpot=document.getElementById('transpot');
+   transpot.insertAdjacentHTML('afterend',div1.outerHTML);
  }
- catch(e){
-  console.log(e);
+  }
+  catch(e){
+   console.log(e);
+  }
  }
-}
-
-  })
+ fun(); 

@@ -14,7 +14,28 @@
    <a href="./signIn.html" >Sign Up/sign IN</a>
 </nav>
  </header>   
-    <main>   <section>    
+    <main> 
+        
+        <section>
+ <div style="display: flex;align-items: center;justify-content: center;margin: 15px;width: 90%;">
+    <form    id="formplace" action="" style=" display: flex;align-items: center;justify-content: center; flex-direction: column; ">
+         <input type="search" id="searchplace" placeholder="scarch best placess " style="border: none ;background-color:  rgb(0, 255, 221) !important;outline: none;background-color: rgb(0, 191, 255);  padding: 10px 10px;min-width:290px;align-items: center; margin-bottom: 15px;font-size: 19px;">
+       
+         <div style="display: flex;align-items: center;"> 
+         <button  id='mapsubmit' type="submit" style="width: 70px ;padding: 4px;" >search</button>
+         <div style="font-size: 20px; margin-left: 55%;border-radius: 5px; display: flex;border: .05px solid black ;padding:2px;" id="escape"><a>Close</a> <img style="padding-left: 2px;height: 20px;" src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAZlBMVEUAAAD///+6urr8/PxPT0/b29uhoaFbW1s8PDx5eXnMzMyNjY3l5eWrq6vDw8NkZGSUlJRpaWlUVFRwcHDv7+/U1NQJCQkwMDCBgYEjIyNCQkKxsbGdnZ11dXUqKirr6+sUFBQeHh4FFKH9AAAH0UlEQVR4nOWdbXvqIAyG+6JTj++bTp1u6v//k4fWOVtbIAlJi/B8ONf5MpZ7bRMICSSpuDbDxfE0/V4OxofLZ5Ikn5fDeLD8np6Oi+FG/tcnkoPPstV6l5i1W6+ymaQRUoSzbD+2sFU13h+lMCUIZ/M1Au6h5VyCkpswX0xIdHdNFjmzRayE+XHkhHfT6MgKyUiYceD9QmZ8ZnERbt1ezqYmWybLeAjnP8x8hX7mLLYxEJ73Ang37c8eEA6XYnyFlsOeCbcDUb5CA8cP0olwKM9XMjo9RwfCGV90sGnkMNkhE+bc4cGsCXkWQCV865Sv0FunhNtD54BJcqC5HAph/tEDX6EPyqtKIFz0xFdo0QFhLhvhbVqiHyOW8F+vfIX+yRLKTUHh2gsSbmxppW60Q2XoMIR9upi6MA4HQTjtm6uiqQThe99UNb2zE26ufTM96Qr9GIGEw76BWgRcU8EI/fExVcH8DYhw3jeLRqBUFYTw1DeJViceQp+ixLMAUcNO6DMgZApnJfQbEIBoI/Qd0P6iWgj9dTIPWdyNmdDXMFGXOWgYCf0M9E0ZQ7+J0MepWrtMEzgD4aZvuxEyTMMNhL6tJky6Ugj9Wg/apF8vagn9D4R1acOijvBV3OhDOoeqIXwlL3OXxttoCP1IG+K0wxD6kPjFq30S3krYf+qeptaEfxth3relZLVt27QR9ru75KIljPD1AsVDLSGjSYh5Rz/eskX2JrcljB+/+Z42CcHjvT8+7C2tZNas9WPf/h94CvlhJ9xCx6o7rtkXDUOrr3oJDdi9N8oZGoTAKouvxuuworK0avU8fA78Ex5shMA6ma/ncZQyOk9DbRW0QMTnupsnQqibaa0X4ENsLREm2vZECCzl0lQLcCFqaqCB3+LERDiDjaFdbvIgaou8gR617qPqhMBqQ33BBweivood+BBHekJock1rAgeiqUwfOEQt9VazFlgQ24yqjIjGPgTgbGSgI4QGe3MdpBuiudECWvNZDftVQmhNs6XdwwWRaejqQ6wQglPctv1zOqKtVQa87Kl8iRVC8LLQ2rJDReQbuLJQfBCewYbY65FpiPZmJ3jt9aMV5UEIzz4ZfSkdEdDNBV8pPrJSD0KELXZTCIiQdjWKjX//w2yGQkrKsYgQQPDaNalsm/4RYrrP1gBrkIighkNMJuHnmRDz53me2zIgggCB64Jf3V+0OyGuA6ZtAeyCCGsZxSVK7ouoOyHqh1uSDE6IMEBsmqROiHZ9MKNgw3KO1Rz2lxDfhsZnlhDgfZl4I6TsVHAZJgV4T9jcCI+En2cyTQ4wOVYIab2SHMYJAv6+piUhdTvN3TxJwN/XtCQk7za5GigLeFvIloT0hlc3E4UBb0G/JCQP4WakNOAt6Bf/4OZ7bGbKA5bz54LQrYqUamgHgOUSqiB03N6kmdoFYLnMKwjdRqEZ2wlg+SEmjp8h0dyOAIsPMWHZTcEa3BVg8YsSnhIvnMmdARYpN0WIOVdNK4zR3QEm45KQYySM2R0CFq4mYXA0N0EN7xRQuZqEr74AZjrspBlGoxLGOhi+Q9b4qjpWipCxYIsLkbEyZ60IOQueeRA5S492ipBxOB5ETkDlTBPmqnx3RF5AxcfdvuWKyAyo+Ngrgt0QuQEVHylVapQLIjug4hPog6Uj8gMqPokOLiqiAKDi+xYYlYgoAaj4ZJorKIgigIpP6PhKPKIMoOJjWf+2CIsoBKj4xE5AxCFKASq+i9TQKEQxQMX3KTY2AlEOUJIvgSMKAkoLlrLgyhT1ID+eYfjf4UVsbF98afjxMPw5Tfjz0vDXFuGvD8Nf44efpwk/1xZ+vjT8nHf4+xbh7z1FsH8Y/h5w+Pv44ddihF9PE35NVAR1beHXJoZfXxp+jXD4dd4R1OqH328Rfs9M+H1PEfSuhd9/GH4Pafh9wBH0coffjx/+mQoRnIsR/tkmEZxPE/4ZQ+GfExXBWV/hn9cWwZl74Z+bGP7ZlxGcXxr+GbQRnCMc/lnQEZznHf6Z7BGcqx/+3QgR3G8R/h0lEdwzE8FdQeHf9xTBnV3h37sWwd15Edx/GP4dlhHcQxrBXbIR3Af8giEDeadzBPdyR3C3eppe+7Yaoasew0D4St5G42UshPAkeO8aGiiMO2Wv4lCN2wzmvUD+9ksJzY0Mlt1OgR5adp3MCLb9XP/DojYQAgm9R2yfbmMIPUe0AgIIvUa0vaIwQo/djcXJgAm9DRrmMIEh9DT02+oJMIReTuBMUzU8YbrxbaVxNUy2SYS+rRf160E6oVdRAxAlCIQe+RuYj8ETphs/kow76CeIJ/QjVWyfqLkQepDw15e68BCmeb87U8vWGglWwn4dDsbF0AnTXG7T16wP9AMkEqbpVuy0RYMOkAJ6LkJMPTKX7LXXvIRpTm+tpWhCeUHdCNN0RuvLpGgEO9WGm1CtqYQOznzSALhOEiBULkeecUBzMFyE6jnKzgCWTs+PhTBNz3KT1f3Z/us7IFSaYzrfoPoBJZqs4iFUHyR38Jg4fn5/4iJUyviix4jv6DdOQjULOHJAjo7k6N4mVkKlfOH2uk4WrHgpP2Gh2ZxWULueO0xdtJIgLDTL9phz4Mb7TIKukBRhqVm2WtuSV7v1SgyulCjhTZvh4niafi8H459LcRPD5+UwHiy/p6fjYojKmtH0H3BtcR4SC4/FAAAAAElFTkSuQmCC'/></div>
+          </div>
+    </form> 
+   
+ </div>
+ <div id="resultapi"  style="margin: auto" >
+<div id="apivalue">
+
+</div>
+    </div>
+        </section>
+        
+        <section>    
              <div style="height: 30px; background-color: antiquewhite; width: 100%; margin: 12px 0;">
 
         <h1 id="tour" style="padding-left: 10px">Tourist-attractions placess</h1>
@@ -92,6 +113,6 @@
    <img src="./download.jpeg" alt="" width="20px" height="20px" style="object-fit: cover; border-radius: 50%;">
             </footer>
       
-    <script src="all.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

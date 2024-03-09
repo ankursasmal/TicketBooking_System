@@ -14,7 +14,7 @@ let bul=document.querySelectorAll('.bul');
 let custom=document.getElementById('custom'); 
 // ues event listner to on click visible
 // on dblclick dissaper
-
+function fun1(){
 let d=document.createElement('div');
     d.setAttribute("id","boxx");
       //   two process to redirect another page
@@ -34,20 +34,17 @@ let d=document.createElement('div');
 // jato bar eventlistner cholba toto bar create hoba
 // so,outside of enentlistner a insertAdjacentHTML kora hoacha
   custom.insertAdjacentHTML("afterend",d.outerHTML);
+  
+   let box2=document.getElementById('boxx');
 
- //   a casa two evenet listner work but aladaq alda liktha hoba nested mana 1 under 1 korla hoba na 
-       custom.addEventListener('dblclick',()=>{
-        // jakhan use korbo takhan create element k axcess korbo
-                 let box2=document.getElementById('boxx');
-
-box2.style.visibility='visible';
-        
-      })
+  box2.style.visibility='hidden';
+}
+    fun1();
      custom.addEventListener('click',()=>{
              // jakhan use korbo takhan create element k axcess korbo
       let box2=document.getElementById('boxx');
 
-box2.style.visibility='hidden'
+box2.style.visibility=='visible'?box2.style.visibility='hidden':box2.style.visibility='visible';
    
   })
   
@@ -70,32 +67,24 @@ let sl1=document.getElementById('feedbackType');
 sl1.addEventListener('change',(e)=>{
 e.preventDefault();
  
-    typeo.innerText='Customer select sepcefic type of Form';
-    com.style.visibility="hidden";
-    com.style.display='block ';
+//     typeo.innerText='Customer select sepcefic type of Form';
+//     com.style.visibility="hidden";
+    
+//     inq.style.visibility="hidden" 
+//     feed.style.visibility="hidden" 
  
-    inq.style.display="block" 
- 
-    inq.style.visibility="hidden" 
-    feed.style.visibility="hidden" 
-    feed.style.display="block" 
-
-// result1,2,3 are feed,com,inq created div 
-   result2.style.visibility="hidden" 
-   result3.style.visibility="hidden" 
-   result1.style.visibility="hidden"
+// // result1,2,3 are feed,com,inq created div 
+//    result2.style.visibility="hidden" 
+//    result3.style.visibility="hidden" 
+//    result1.style.visibility="hidden"
    
  if(e.target.value==="select"){
    typeo.innerText='Customer select sepcefic type of Form';
    com.style.visibility="hidden";
-   com.style.display='block ';
-
-   inq.style.display="block" 
-
+    
    inq.style.visibility="hidden" 
    feed.style.visibility="hidden" 
-   feed.style.display="block" 
-   result2.style.visibility="hidden" 
+    result2.style.visibility="hidden" 
    result3.style.visibility="hidden" 
    result1.style.visibility="hidden"
    //    jakha na use jkorbo sakana axces korta hoba then use all tag,ele,id..
@@ -110,8 +99,8 @@ e.preventDefault();
 }
 else if(sl1.value==="Feedback"){
    typeo.innerText='Customer Feedback Form';
-   com.style="visibility:hidden;display:block";
-   inq.style="visibility:hidden;display:block";
+   com.style.visibility="hidden";
+   inq.style.visibility="hidden";
    feed.style.visibility="visible";
    result2.style.visibility="hidden" ;
    result3.style.visibility="hidden" ;
@@ -121,8 +110,8 @@ else if(sl1.value==="Feedback"){
 }
 else if(sl1.value==="Complaint"){
    typeo.innerText='Customer Complaint Form';
-   feed.style="visibility:hidden;display:block"; 
-   inq.style="visibility:hidden;display:block"; 
+   feed.style.cssText="visibility:hidden;display:block"; 
+   inq.style.cssText="visibility:hidden "; 
 
    com.style.visibility="visible"; 
    result1.style.visibility="hidden"; 
@@ -234,7 +223,7 @@ result2.innerHTML=`<p>Your complaint resolve soon... </p>`
 
 })
 
-inq.addEventListener('submit',function(e){
+inq.addEventListener('submit', (e)=>{
 e.preventDefault();
 let feedbackInqury=document.getElementById('feedbackInqury').value;
 
