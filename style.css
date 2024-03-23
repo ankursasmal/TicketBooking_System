@@ -48,3 +48,18 @@ justify-content:left;   }
 header:hover {
    cursor: pointer; 
  }
+ #mainimg{
+   background-image:url('https://static.vecteezy.com/system/resources/previews/006/181/547/original/ticket-booking-book-flight-buying-tickets-online-flat-illustration-design-travel-concept-for-mobile-and-web-graphics-vector.jpg') ;
+   background-size: contain;
+   background-repeat: no-repeat;
+   height: 93vh;
+   width: 100vw;
+
+ }
+ #mainimg1{
+   background-image:url('https://static.vecteezy.com/system/resources/previews/006/181/547/original/ticket-booking-book-flight-buying-tickets-online-flat-illustration-design-travel-concept-for-mobile-and-web-graphics-vector.jpg') ;
+   background-size: contain;
+    background-repeat: no-repeat;
+   height: 93vh;
+   width: 100vw;
+  }
